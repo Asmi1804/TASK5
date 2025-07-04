@@ -1,0 +1,459 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #2f3e46;
+  --secondary-color:  #1a252f;
+  --accent-color:   #494f52;
+  --bg-light: #f7f9fc;
+  --text-color: #333;
+  --white: #fff;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: var(--secondary-color);  /* Changed from #34495e */
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+
+/* Navigation */
+nav ul {
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem;
+  flex-wrap: wrap;
+  border-radius: 0 0 12px 12px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+/* Section Styling */
+section {
+  padding: 2.5rem;
+  background: var(--white);
+  margin: 2rem auto;
+  max-width: 2000px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+ul li {
+  margin: 8px 0;
+}
+
+/* Buttons for Resume */
+.resume-buttons .btn {
+  display: inline-block;
+  margin: 10px 15px 0 0;
+  padding: 12px 24px;
+  background: var(--secondary-color);
+  color: var(--white);
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.resume-buttons .btn:hover {
+  background: var(--accent-color);
+  transform: scale(1.05);
+}
+
+/* Project / Internship / Research Card Styling */
+.internship-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.internship-card {
+  flex: 1 1 48%;
+  background-color: #f7f9fc;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 5px solid var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.internship-card h3 {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.intern-period {
+  font-weight: normal;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.internship-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 0.7rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.internship-card ul {
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.internship-card ul li {
+  list-style-type: disc;
+  color: var(--text-color);
+}
+.internship-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .internship-grid {
+    flex-direction: column;
+  }
+
+  .internship-card {
+    flex: 1 1 100%;
+  }
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+/* Each Skill Box */
+.skill-card {
+  background-color: var(--bg-light);
+  border-left: 5px solid var(--secondary-color);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: var(--primary-color);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Certificate Row Styling */
+.certificate-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fb;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  border-left: 5px solid var(--secondary-color);
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* Certificate Title */
+.cert-title {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+/* Certificate Button */
+.cert-btn {
+  background: var(--secondary-color);
+  color: var(--white);
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cert-btn:hover {
+  background: var(--accent-color);
+  transform: scale(1.05);
+}
+.paper-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.paper-card {
+  flex: 1 1 48%;
+  background: white;
+  color: #333;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.paper-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.paper-card p {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.paper-card .btn {
+  align-self: start;
+  margin-top: 1rem;
+  background: var(--secondary-color);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.paper-card .btn:hover {
+  background: var(--accent-color);
+}
+.paper-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .paper-grid {
+    flex-direction: column;
+  }
+
+  .paper-card {
+    flex: 1 1 100%;
+  }
+}
+
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary-color); /* unified dark tone */
+  color: white;
+  font-size: 0.9rem;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resume-buttons .btn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+/* Buttons for Research Papers */
+.paper{
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 22px;
+  background: var(--secondary-color);
+  color: var(--white);
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.paper{
+  background: var(--accent-color);
+  transform: scale(1.05);
+}
+.btn {
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  background: var(--secondary-color);
+  color: var(--white);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+/* Contact Section Message */
+.contact-msg {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+/* Contact Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+form input,
+form textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 2px rgba(22, 160, 133, 0.2);
+}
+
+form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+form button {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background: var(--accent-color);
+  transform: scale(1.05);
+}
+
+/* Success Message Styling */
+.success-message {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: green;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: var(--white);
+  border-left: 5px solid var(--secondary-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.project-card img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.project-card p {
+  font-size: 0.92rem;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+

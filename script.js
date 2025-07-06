@@ -28,3 +28,4 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
       alert("❌ Failed to send message. Please try again.");
     });
 });
+
